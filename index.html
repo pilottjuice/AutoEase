@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lightweight Automation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d1117;
+            color: #e6e6e6;
+            line-height: 1.3;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate {
+            animation: fadeUp 0.6s ease-out;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0f141a;
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1f242d;
+        }
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #58a6ff;
+        }
+        nav .logo-shape {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #58a6ff, #238636);
+            border-radius: 4px;
+        }
+        nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            margin-left: 16px;
+            font-size: 13px;
+        }
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .hero-illustration {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            background: radial-gradient(circle at 30% 30%, #58a6ff, #1b2330);
+            border-radius: 16px;
+            opacity: 0.9;
+            animation: fadeUp 0.8s ease-out;
+        }
+        .hero h1 {
+            font-size: 28px;
+            margin: 12px 0 6px 0;
+            color: #58a6ff;
+        }
+        .hero p {
+            font-size: 14px;
+            color: #c9d1d9;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* Dashboard Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 20px 24px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Cards */
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            animation: fadeUp 0.6s ease-out;
+        }
+        .card h3 {
+            margin: 0 0 6px 0;
+            font-size: 15px;
+            color: #58a6ff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .card svg {
+            width: 20px;
+            height: 20px;
+            fill: #58a6ff;
+        }
+
+        /* Projects Button */
+        .projects-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 16px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .projects-link:hover {
+            background: #2ea043;
+        }
+
+        footer {
+            text-align: center;
+            padding: 12px;
+            background: #0f141a;
+            border-top: 1px solid #1f242d;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <div class="logo-shape"></div>
+        Lightweight Automation
+    </div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="projects.html">Projects</a>
+    </div>
+</nav>
+
+<div class="hero animate">
+    <div class="hero-illustration"></div>
+    <h1>Automation Made Simple</h1>
+    <p>Clean, fast, and effective automation solutions designed for SMEs, NGOs, and schools.</p>
+</div>
+
+<div class="grid">
+
+    <!-- About Us -->
+    <div class="card animate" id="about">
+        <h3><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>About Us</h3>
+        <p>We build compact, high‑impact automation tools that remove repetitive work and improve reporting efficiency. Our solutions deliver immediate value without requiring complex systems or IT infrastructure.</p>
+    </div>
+
+    <!-- Objectives -->
+    <div class="card animate">
+        <h3><svg viewBox="0 0 24 24"><path d="M3 3h18v2H3z"/></svg>Objectives</h3>
+        <p>We reduce manual workload, enhance accuracy, and streamline reporting. Our automations are affordable, fast to deploy, and tailored to the workflows of SMEs, NGOs, and schools.</p>
+    </div>
+
+    <!-- Target Users -->
+    <div class="card animate">
+        <h3><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5"/></svg>Target Users</h3>
+        <p>We support SMEs needing efficient reporting, NGOs handling monthly summaries, schools managing attendance and grades, consultants automating presentations, and startups seeking simple automation tools.</p>
+    </div>
+
+    <!-- Services -->
+    <div class="card animate" id="services">
+        <h3><svg viewBox="0 0 24 24"><path d="M4 4h16v2"/></svg>Services</h3>
+        <p>We provide Excel automation, Word report generation, PowerPoint chart updates, business document templates, and multi‑step workflow automation for organizations of all sizes.</p>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="card animate" id="why">
+        <h3><svg viewBox="0 0 24 24"><path d="M12 2l4 8h-8z"/></svg>Why Choose Us</h3>
+        <p>We deliver fast results with minimal setup. Our tools are customizable, reliable, and designed to eliminate human error while fitting seamlessly into your existing workflow.</p>
+    </div>
+
+    <!-- Projects -->
+    <div class="card animate">
+        <h3><svg viewBox="0 0 24 24"><path d="M3 3h18v2"/></svg>Projects</h3>
+        <p>See how our automation solutions help organizations save time and improve reporting quality.</p>
+        <a class="projects-link" href="projects.html">View Projects</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Lightweight Automation
+</footer>
+
+</body>
+</html>
