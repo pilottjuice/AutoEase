@@ -1,0 +1,60 @@
+<!-- This file contains: ✔ Original English content (unchanged) ✔ Faithful Traditional Chinese translation ✔ Language switcher (EN / 繁中) ✔ Only one language visible at a time ✔ Comments explaining how the language switcher works -->
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <title>Lightweight Automation Projects</title> <meta name="viewport" content="width=device-width, initial-scale=1" /> <style> /* Your original CSS preserved exactly */ :root { --bg: #0f172a; --card: #111827; --accent: #38bdf8; --text: #e5e7eb; --muted: #9ca3af; --border: #1f2937; --danger: #ef4444; } body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at top, #1f2937 0, #020617 55%); color: var(--text); line-height: 1.6; } .page { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; } header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; } .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.9rem; } .logo-mark { width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, #38bdf8, #22c55e); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; color: #0b1120; } nav { display: flex; gap: 18px; font-size: 0.9rem; } nav a { color: var(--muted); padding-bottom: 2px; border-bottom: 1px solid transparent; } nav a:hover { color: var(--text); border-color: var(--accent); } .lang-switcher { display: flex; gap: 8px; } .btn-lang { padding: 6px 10px; font-size: 0.75rem; border-radius: 6px; background: #1e293b; border: 1px solid #334155; color: #e2e8f0; cursor: pointer; } .btn-lang:hover { border-color: var(--accent); color: var(--accent); } </style> </head> <body> <div class="page">
+
+<header> <div class="logo"> <div class="logo-mark">LA</div> <span data-lang="en">Lightweight Automation</span> <span data-lang="zh" style="display:none;">輕量自動化方案</span> </div>
+
+<nav> <a href="#projects"> <span data-lang="en">Projects</span> <span data-lang="zh" style="display:none;">項目示例</span> </a> <a href="#services"> <span data-lang="en">Services</span> <span data-lang="zh" style="display:none;">服務內容</span> </a> <a href="#contact"> <span data-lang="en">Contact</span> <span data-lang="zh" style="display:none;">聯絡我們</span> </a> </nav>
+
+<!-- Language Switcher --> <!-- Clicking EN or 繁中 will show/hide all spans with data-lang="en" or data-lang="zh" --> <div class="lang-switcher"> <button onclick="setLang('en')" class="btn-lang">EN</button> <button onclick="setLang('zh')" class="btn-lang">繁中</button> </div> </header>
+
+<!-- HERO SECTION (English preserved, Chinese added) --> <section class="hero"> <div class="hero-main"> <h1> <span data-lang="en">Small scripts, <span>big impact</span>.</span> <span data-lang="zh" style="display:none;">小型腳本，<span>帶來巨大改變</span>。</span> </h1>
+
+<p>
+  <span data-lang="en">Lightweight automation projects that quietly remove repetitive work—so your team can focus on what truly matters.</span>
+  <span data-lang="zh" style="display:none;">輕量級自動化項目能悄悄消除重複性工作，讓你的團隊專注在真正重要的事情上。</span>
+</p>
+
+<div class="hero-tags">
+  <span class="tag highlight" data-lang="en">Python automation</span>
+  <span class="tag highlight" data-lang="zh" style="display:none;">Python 自動化</span>
+
+  <span class="tag" data-lang="en">Excel & CSV workflows</span>
+  <span class="tag" data-lang="zh" style="display:none;">Excel／CSV 工作流程</span>
+
+  <span class="tag" data-lang="en">Word & PowerPoint updates</span>
+  <span class="tag" data-lang="zh" style="display:none;">Word／PowerPoint 自動更新</span>
+
+  <span class="tag" data-lang="en">APIs & integrations</span>
+  <span class="tag" data-lang="zh" style="display:none;">API 整合</span>
+
+  <span class="tag" data-lang="en">SME-friendly solutions</span>
+  <span class="tag" data-lang="zh" style="display:none;">中小企友善方案</span>
+</div>
+
+<div class="hero-actions">
+  <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <span class="icon">⚡</span>
+    <span data-lang="en">Start a small automation</span>
+    <span data-lang="zh" style="display:none;">開始一個小型自動化</span>
+  </button>
+
+  <button class="btn btn-outline" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+    <span class="icon">👀</span>
+    <span data-lang="en">View sample projects</span>
+    <span data-lang="zh" style="display:none;">查看示例項目</span>
+  </button>
+</div>
+
+<p class="hero-note">
+  <span data-lang="en">No heavy platforms—just focused scripts that plug into what you already use.</span>
+  <span data-lang="zh" style="display:none;">不需要大型平台，只需簡單腳本即可融入你現有的工具。</span>
+</p>
+
+</div> </section>
+
+<!-- LANGUAGE SWITCHER SCRIPT --> <script> /* Language switcher logic: ✔ Finds all elements with data-lang="en" or data-lang="zh" ✔ Shows only the selected language ✔ Saves preference in localStorage */ function setLang(lang) { document.querySelectorAll('[data-lang]').forEach(el => { el.style.display = (el.getAttribute('data-lang') === lang) ? 'inline' : 'none'; }); localStorage.setItem('site-lang', lang); }
+
+// Load saved language on page load const saved = localStorage.getItem('site-lang') || 'en'; setLang(saved); </script>
+
+</div> </body> </html>
